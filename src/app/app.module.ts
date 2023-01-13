@@ -8,6 +8,8 @@ import { AutorListaComponent } from './autor-lista/autor-lista.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LibroDetalleComponent } from './libro-detalle/libro-detalle.component';
 import { librodetalle } from './mocks';
+import { LibroOpinionesComponent } from './libro-opiniones/libro-opiniones.component';
+import { LibroImagenesComponent } from './libro-imagenes/libro-imagenes.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { librodetalle } from './mocks';
     LibroListaComponent,
     AutorListaComponent,
     NotFoundComponent,
-    LibroDetalleComponent
+    LibroDetalleComponent,
+    LibroOpinionesComponent,
+    LibroImagenesComponent
   ],
   imports: [
     BrowserModule,

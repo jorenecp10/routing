@@ -4,3 +4,10 @@
 <dt>Titulo</dt><dd>{{ libro.titulo }}</dd>
 <dt>Autor</dt><dd>{{ libro.autor }}</dd>
 </dl>
+
+<ul class=”list-inline”>
+  <li class=”list-inline-item”><h4>Información adicional:</h4></li>
+  <li class=”list-inline-item”><a routerLink=”imagenes” >Imágenes</a></li>
+  <li class=”list-inline-item”><a routerLink=”opiniones”>Opiniones</a></li>
+  </ul>
+<router-outlet></router-outlet>
