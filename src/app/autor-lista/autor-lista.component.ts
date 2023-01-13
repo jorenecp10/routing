@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Libro } from '../libro.model';
-import { LIBROS } from '../mocks';
+import { librodetalle } from '../mocks';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-autor-lista',
@@ -12,9 +13,14 @@ export class AutorListaComponent implements OnInit{
 
   autores:Libro[]=[];
 
-  ngOnInit(){
-    
-    this.autores=LIBROS;
+  constructor(private _librodetalle:librodetalle, private router:Router){
+
+
+  }
+
+  ngOnInit():void{
+    this.autores = this._librodetalle.getLibros();
+
   }
 
 

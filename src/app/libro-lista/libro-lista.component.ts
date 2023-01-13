@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Libro } from '../libro.model';
-import { LIBROS } from '../mocks';
+import { librodetalle } from '../mocks';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-libro-lista',
@@ -11,9 +12,14 @@ import { LIBROS } from '../mocks';
 export class LibroListaComponent implements OnInit {
   libros:Libro[]=[];
 
-  ngOnInit() {
+  constructor(private _librodetalle:librodetalle,private router:Router){
 
-    this.libros=LIBROS;
+  }
+
+  ngOnInit():void {
+
+     this.libros=this._librodetalle.getLibros();
+
   }
 
 

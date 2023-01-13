@@ -3,7 +3,7 @@
     <div class="">
     <h5 class="card-title">{{libro.autor}}</h5>
     </div>
-    <p class="card-text"> {{libro.titulo}}</p>
+    <a [routerLink]="['/libros', libro.id]"> {{libro.titulo}}</a>
     <p class="card-text">ID: {{libro.id}}</p>
   </div>
 </div>
